@@ -10,73 +10,89 @@ function writePassword() {
 
 }
 
-// Array for the password definitions
-
-// pwLength defined as reference for now
-var pwLength = 10;
-// variables - still untested with prompts
+// List of defined variables
+var pwLength = askLength;
 var pwUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var pwLower = pwUpper[25].toLowerCase();
 var pwNumeric = "0123456789";
 var pwSpecial = "!@#$%^&*()";
 
-var genSpecial = [];
-var genUpper = [];
+// Place holder variables
+var showResult = [];
 
-  for (var i = 0; i < pwLength; i++) {
-    var genUpper = Math.floor(Math.random() * pwUpper.length);
-    console.log (pwUpper.charAt(genUpper));
-  }
+// start chain
+var hello = alert("Welcome, lets generate your PW!");
+var askLength = prompt("What length of characters would you like, select between 8-128");
+var askUpper = confirm("Do you want upper case letters?");
+var askLower = confirm("Do you want lower case letters?");
+var askNumeric = confirm("Do you want numeric characters?");
+var askSpecial = confirm("Do you want special characters?");
+
+  showResult.push
+  (
+    "\n Desired password length: " + askLength, 
+    "\n You would like upper case letters: " + askUpper, 
+    "\n You would like lower case letters: " + askLower, 
+    "\n You would like numeric characters: " + askNumeric,
+    "\n You would like special characters: " + askSpecial,
+    "\n \n Click Generate Password below!"
+  );
+  alert(showResult);
+
+// IF statements
+
+    //upper characters
+    if(askUpper === true){
+      for (var i = 0; i < pwLength; i++) { 
+        var genUpper = Math.floor(Math.random() * pwUpper.length);
+        console.log (pwUpper.charAt(genUpper));
+      }
+    }
+    //lower character
+    if(askLower === true){
+      for (var i = 0; i < pwLength; i++) 
+      {
+        var genLower = Math.floor(Math.random() * pwLower.length);
+        console.log (pwLower.charAt(genLower));
+      }
+    }
+    //numeric character
+    if(askNumeric === true){
+      for (var i = 0; i < pwLength; i++) 
+      {
+        var genNumeric= Math.floor(Math.random() * pwNumeric.length);
+        console.log (pwNumeric.charAt(genNumeric));
+      }
+    }
+    //special character
+    if(askSpecial === true){
+      for (var i = 0; i < pwLength; i++) 
+      {
+        var genSpecial = Math.floor(Math.random() * pwLower.Special);
+        console.log (pwSpecial.charAt(genSpecial));
+      }
+    }
+    //CAN YOU DISPLAY CHARACTERS BASED ON THE LENGTH??
 
 
+    // for (var i = 0; i < askLength; i++) {
+    //   console.log (pwSpecial.charAt(genSpecial));
+      
+    // }
 
-
-
-// Start
-// var hello = alert("Welcome, lets generate your PW!");
-// var pwLength = prompt("What length of characters would you like, select between 8-128");
-// var pwUpper = confirm("Do you want upper case letters?");
-// var pwLower = confirm("Do you want lower case letters?");
-// var pwNumeric = confirm("Do you want numeric characters?");
-// var pwSpecial = confirm("Do you want special characters?");
-// var showResult= []; 
-
-// showResult.push (
-//   "\n Desired password length: " + pwLength, 
-//   "\n You would like upper case letters: " + pwUpper, 
-//   "\n You would like lower case letters: " + pwLower, 
-//   "\n You would like numeric characters: " + pwNumeric,
-//   "\n You would like special characters: " + pwSpecial,
-//   "\n \n Click Generate Password below!"
-//   );
-//   alert(showResult);
-
-  // for (var i = 0; i < 10; i++) {
-
-  //   var generatePassword = 
-  //     Math.floor(Math.random() * 10) +
-  //     Math.floor(Math.random() * 10) +
-  //     Math.floor(Math.random() * 10) +
-  //     + 1;
- 
-
-
+    // for (let index = 0; index < array.length; index++) {
+    //   const element = array[index];
+      
+    }
   
+// Generate anoteher loop or put everything in a FUNCTION
 
-  // for (var j = 0; j < 1; i++) {
-  //   var genNumeric = Math.floor(Math.random() * 10) +1;
-  //   console.log(genNumeric);
-  // }
-  
-
-
-
-
-// console.log(pwLength);
-// console.log(pwLower);
-// console.log(pwUpper);
-// console.log(pwNumeric);
-// console.log(pwSpecial);
+console.log("----Console log for my own sanity------");
+console.log("Length of characters: " + askLength);
+console.log("Lower characters :" + askLower);
+console.log("Upper characters :" + askUpper);
+console.log("Numeric charaters: " + askNumeric);
+console.log("Special characters: " + askSpecial);
 
 
 
