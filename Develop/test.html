@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <p id="demo"></p>
+
+<script>
+
+// var pwLength = 5
+// var pwUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// var pwLower = pwUpper[25].toLowerCase();
+// var pwNumeric = "0123456789";
+// var pwSpecial = "!@#$%^&*()";
+
+// var genUpper = [];
+// var genLower = [];
+
+
+//if this was a loop, it can be done this way, also add +
+
+var poop = [];
+var test = ["aa", "bb", "cc"];
+poop += test[0];
+poop += test[1];
+poop += test[2];
+document.getElementById("demo").innerHTML = poop;
+console.log(poop);
+
+var a = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+var b = "";
+var i;
+for (i = 0; i < a.length; i++) {
+  b += a[i];
+}
+document.getElementById("demo").innerHTML = b;
+console.log (b);
+
+var pwAsk = prompt("Length of password");
+var pwUpper = ["a", "b", "c", "d"];
+var pwNumeric = ["0", "1", "2", "3"];
+
+var text ='';
+var pwUpperAdd = "";
+var pwUpperAddb = pwUpperAdd;
+var i;
+
+for (i = 0; i < pwAsk; i++) {
+  pwUpperAdd += pwUpper.charAt(Math.floor(Math.random() * pwUpper.length));
+}
+
+// for (i = 0; i < pwAsk; i++) {
+//     pwUpperAdd = Math.floor(Math.random() * pwUpper[.length]);
+    
+// }
+document.getElementById("demo").innerHTML = pwUpperAdd;
+console.log (pwUpperAdd);
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
