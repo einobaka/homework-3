@@ -1,77 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
 
 
     <p id="demo"></p>
 
-<script>
+    <script>
 
-// var pwLength = 5
-// var pwUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-// var pwLower = pwUpper[25].toLowerCase();
-// var pwNumeric = "0123456789";
-// var pwSpecial = "!@#$%^&*()";
+        var pwLength = 5
+        var pwUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var pwLower = pwUpper[25].toLowerCase();
+        var pwNumeric = "0123456789";
+        var pwSpecial = "!@#$%^&*()";
 
-// var genUpper = [];
-// var genLower = [];
+        var genUpper = [];
+        var genNumeric = [];
 
 
-//if this was a loop, it can be done this way, also add +
+        //if this was a loop, it can be done this way, also add +
 
-var poop = [];
-var test = ["aa", "bb", "cc"];
-poop += test[0];
-poop += test[1];
-poop += test[2];
-document.getElementById("demo").innerHTML = poop;
-console.log(poop);
-
-var a = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
-var b = "";
-var i;
-for (i = 0; i < a.length; i++) {
-  b += a[i];
-}
-document.getElementById("demo").innerHTML = b;
-console.log (b);
-
-var pwAsk = prompt("Length of password");
-var pwUpper = ["a", "b", "c", "d"];
-var pwNumeric = ["0", "1", "2", "3"];
-
-var text ='';
-var pwUpperAdd = "";
-var pwUpperAddb = pwUpperAdd;
-var i;
-
-for (i = 0; i < pwAsk; i++) {
-  pwUpperAdd += pwUpper.charAt(Math.floor(Math.random() * pwUpper.length));
-}
-
-// for (i = 0; i < pwAsk; i++) {
-//     pwUpperAdd = Math.floor(Math.random() * pwUpper[.length]);
-    
-// }
-document.getElementById("demo").innerHTML = pwUpperAdd;
-console.log (pwUpperAdd);
+        var length = prompt('length of pw?');
+        var caseUpper = confirm('uppercase?');
+        var caseLower = confirm('lowercase?');
+        var caseNumeric = confirm('numeric?');
+        var caseSpecial = confirm('special?');
 
 
 
+        function generatePassword(length) {
+
+            var pwResult = [];
+
+            var pwUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var pwLower = pwUpper.toLowerCase();
+            var pwNumeric = '0123456789';
+            var pwSpecial = '!@#$%^&*()';
+            //multi variables
+            var pwUpLow = pwUpper.concat(pwLower);
+            var pwUpLowNum = pwUpper.concat(pwLower, pwNumeric);
+            // var pwUpLowNumSpe = (pwUpper + pwLower + pwNumeric + pwSpecial);
+            var i;
+            if (caseUpper & caseLower & caseNumeric === true) {
+                for (i = 0; i < length; i++) {
+                    pwResult += pwUpLowNum.charAt(Math.floor(Math.random() * pwUpLowNum.length));
+                }
+                console.log(pwResult);
+            }
+            if (caseUpper & caseLower === true) {
+                for (i = 0; i < length; i++) {
+                    pwResult += pwUpLow.charAt(Math.floor(Math.random() * pwUpLow.length));
+                }
+                console.log(pwResult);
+            }
+
+            // if (caseUpper === true && caseLower === true && caseNumeric === true && caseSpecial === true) {
+            //     for ( i = 0; i < length; i++ ) {
+            //     pwResult += pwUpLowNumSpe.charAt(Math.floor(Math.random() * pwUpLowNumSpe.length));
+            //     }
+            // }
+            // else if (caseUpper === true) {
+            //     for ( i = 0; i < length; i++ ) {
+            //     pwResult += pwUpper.charAt(Math.floor(Math.random() * pwUpper.length));
+            //     }
+            // }
+            // else if (caseLower === true) {
+            //     for ( i = 0; i < length; i++ ) {
+            //     pwResult += pwLower.charAt(Math.floor(Math.random() * pwLower.length));
+            //     }
+            // }
+            // if (caseNumeric === true) {
+            //     for ( i = 0; i < length; i++ ) {
+            //     pwResult += pwNumeric.charAt(Math.floor(Math.random() * pwNumeric.length));
+            //     }
+            // }
+            // if (caseSpecial === true) {
+            //     for ( i = 0; i < length; i++ ) {
+            //     pwResult += pwSpecial.charAt(Math.floor(Math.random() * pwSpecial.length));
+            //     }
+            // }
+
+            //this is important below     
+            return pwResult;
+
+        }
 
 
 
 
+            // upper characters
+
+            // output = (pwUpper.charAt(genUpper) + pwNumeric.charAt(genNumeric));
+
+            // var i;
+            //   for (var i = 0; i < 1; i++) { 
+            //     genUpper += Math.floor(Math.random() * pwUpper.length);
+            //     genNumeric += Math.floor(Math.random() * pwNumeric.length);
+            //     console.log (pwUpper.charAt(genUpper) + pwNumeric.charAt(genNumeric);
+            //   }
+            //   document.getElementById("demo").innerHTML = output;
+
+            //     //lower character
+            // if(askLower === true){
+            //   for (var i = 0; i < 1; i++) 
+            //   {
+            //     var genLower = Math.floor(Math.random() * pwLower.length);
+            //     console.log (pwLower.charAt(genLower));
+            //   }
+            // }
+            // // numeric character
+            // if(askNumeric === true){
+            //   for (var i = 0; i < 1; i++) 
+            //   {
+            //     var genNumeric= Math.floor(Math.random() * pwNumeric.length);
+            //     console.log (pwNumeric.charAt(genNumeric));
+            //   }
+            // }
+            // // special character
+            // if(askSpecial === true){
+            //   for (var i = 0; i < 1; i++) 
+            //   {
+            //     var genSpecial = Math.floor(Math.random() * pwSpecial.length);
+            //     console.log (pwSpecial.charAt(genSpecial));
+            //   }
+            // }
+
+            // for (i = 0; i < pwAsk; i++) {
+            //     pwUpperAdd = Math.floor(Math.random() * pwUpper[.length]);
+
+            // }
+            // document.getElementById("demo").innerHTML = pwUpperAdd;
+            // console.log (pwUpperAdd);
+
+            // NEW TEST SCRIPT HERE
 
 
-</script>
+        //     function writePassword() {
+        //         var gather = userCriteria();
+
+        //     }
+
+        //     function jumblePassword() {
+
+        //         charArray = [uppercase, lowercase, numeric, special]
+
+        //         characters = {
+        //             uppercase =['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+        //             lowercase = uppercase.caseLower;
+        //             numeric =['123456789'];
+        //             special =['!@#$%^&*()']
+        //         }
+        //         // hint characters.uppercase
+        //     }
+
+        //     // write function for the user criteria to store the information
+        //     function userCriteria(); { }
+        //     var gather = [];
+        //     var
+        //         length = [];
+        //     // this is an object
+
+        //     types = {
+        //         uppercase = false;
+        //         lowercase = false;
+        //         numeric = false;
+        //         special = false;
+        //     }
+
+        //     if (askUpper === true) {
+        //         uppercase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+        //     }
+        //     else {
+        //         upppercase = '';
+        //     }
+
+
+
+        //     //when you do a return that will be used to make the password
+        //     return userCriteria();
+
+
+        // }
+
+    </script>
 
 
 </body>
+
 </html>

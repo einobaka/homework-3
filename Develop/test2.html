@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <p id="demo"></p>
+
+    <script>
+
+
+
+        // function writePassword() {
+        //     var gather = userCriteria();
+
+        // }
+
+        // function jumblePassword() {
+
+        //     charArray = [uppercase, lowercase, numeric, special]
+
+        //     characters = {
+        //         uppercase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+
+        //         numeric = ['123456789'];
+        //         special = ['!@#$%^&*()']
+        //     }
+        //     // hint characters.uppercase
+        // }
+
+        // write function for the user criteria to store the information
+        // function userCriteria(finalResult) {
+
+
+        //     // this is an object
+        //     var askUpper = confirm("Do you want upper case letters?");
+        //     var askLower = confirm("Do you want lower case letters?");
+
+
+        //     length = 2;
+
+        //     var uppercase = [''];
+        //     var lowercase = [''];
+
+
+        //     if (askUpper === true) {
+        //         uppercase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+        //     }
+        //     else if (askUpper === false) {
+        //         upppercase = '';
+        //     }
+        //     if (askLower === true) {
+        //         lowercase = [lowercase = uppercase.caseLower]
+        //     }
+        //     else if (askLower === false) {
+        //         upppercase = '';
+        //     }
+
+        //     var result = uppercase.concat(lowercase)
+
+        //     for (var i = 0; i < length; i++)
+        //         finalResult += Math.floor(Math.random() * result.length)
+
+
+
+        //     //when you do a return that will be used to make the password
+        //     return userCriteria(finalResult)
+
+        // }
+        // console.log(userCriteria());
+
+        askUpper = true;
+
+        // if (askUpper === true) {
+        //          uppercase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+        // }
+        // uppercase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
+        // numeric = ['1234567890'];
+        // result = uppercase.concat(numeric)
+        // finalResult = '';
+
+        // for (var i = 0; i < 20; i++)
+        //     finalResult += Math.floor(Math.random() * numeric.length)
+
+        // console.log(finalResult);
+        // document.getElementById("demo").innerHTML = finalResult;
+        // console.log(result);
+
+
+        //this is good code right now
+        askLength = prompt("What length of characters would you like, select between 8-128");
+
+
+
+
+        if (askUpper === true) {
+            uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        }
+        else if (askUpper === false) {
+            upppercase = '';
+
+
+
+
+
+            uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            lowercase = uppercase.toLowerCase();
+            numeric = '1234567890';
+            special = '!@#$%^&*()'
+            result = uppercase.concat(lowercase, numeric, special)
+
+            // for loops need a defined variable and can be empty
+            finalResult = '';
+            for (var i = 0; i < askLength; i++) {
+                finalResult += result.charAt(Math.floor(Math.random() * result.length));
+
+            }
+            console.log("finalResult: " + finalResult);
+            console.log('=====================');
+            console.log("result after if/else statements " + result);
+            this code is working right now
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
