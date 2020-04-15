@@ -76,7 +76,7 @@
         // }
         // console.log(userCriteria());
 
-        askUpper = true;
+        // askUpper = true;
 
         // if (askUpper === true) {
         //          uppercase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
@@ -95,37 +95,100 @@
 
 
         //this is good code right now
-        askLength = prompt("What length of characters would you like, select between 8-128");
+        // askLength = prompt("What length of characters would you like, select between 8-128");
 
 
+        // askUpper = confirm("Do you want upper case letters?");
+        // //  askLower = confirm("Do you want lower case letters?");
+
+        // askUpper = false;
+
+        // uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        // if (askUpper === true) {
+        //     uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        // }
+        // else if (askUpper === false) {
+        //     upppercase = '';
 
 
-        if (askUpper === true) {
-            uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        }
-        else if (askUpper === false) {
-            upppercase = '';
+        // length = 15;
+        // numeric = '1234567890';
+        // special = '!@#$%^&*()'
+        // result = uppercase().concat(lowercase(), numeric, special)
+
+        // // for loops need a defined variable and can be empty
+        // finalResult = '';
+        // for (var i = 0; i < length; i++) {
+        //     finalResult += result.charAt(Math.floor(Math.random() * result.length));
+
+        // }
+        // console.log("finalResult should be " + length + " lines: " + finalResult);
+        // console.log('=====================');
+        // console.log("result after if/else statements " + result);
+        // // end of working code block
+
+        // // is this better in an object??
+
+        // function uppercase() {
+
+        //     confirm("Would you like uppercase letters?")
 
 
+        //     if (confirm === true) {
+        //         var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        //     }
+        //     else {
+        //         var uppercase = '';
+        //     }
+        //     return uppercase;
+        // }
+        // function lowercase() {
 
+        //     confirm("Would you like lowercase letters?")
+        //     //if else for confirm
+        //     if (confirm === true) {
+        //         var lowercase = 'abcdefghijklmnopqrstuvwxyz';
+        //     }
+        //     else {
+        //         var lowercase = '';
+        //     }
+        //     return lowercase;
+        // }
+        // new code base based on information above
 
+        var passPrompt = {
+            length: 0,
+            lowercase: false,
+            uppercase: false,
+            numeric: false,
+            special: false,
 
-            uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            lowercase = uppercase.toLowerCase();
-            numeric = '1234567890';
-            special = '!@#$%^&*()'
-            result = uppercase.concat(lowercase, numeric, special)
+            length: prompt('How long would you like your password? Pick between 8-128 characters.'),
+            lowercase: confirm('Would you like lowercase letters?'),
+            uppercase: confirm('Would you like uppercase letters?'),
+            numeric: confirm('Would you like numeric characters?'),
+            special: confirm('Would you like special charaacters?'),
 
-            // for loops need a defined variable and can be empty
-            finalResult = '';
-            for (var i = 0; i < askLength; i++) {
-                finalResult += result.charAt(Math.floor(Math.random() * result.length));
+            lowercase: function () {
 
+                if (prompt.lowercase === true) {
+                    var result = 'abcdefghijklmnopqrstuvwxyz';
+                }
+                else {
+                    var result = '';
+                }
+                return result;
             }
-            console.log("finalResult: " + finalResult);
-            console.log('=====================');
-            console.log("result after if/else statements " + result);
-            this code is working right now
+        }
+        console.log("===================")
+        console.log("Chosen length: " + passPrompt.length);
+        console.log("Lowercase?: " + passPrompt.lowercase);
+        console.log("Uppercase?: " + passPrompt.uppercase);
+        console.log("Numeric?: " + passPrompt.numeric);
+        console.log("Special: " + passPrompt.special);
+        console.log(passPrompt.lowercase());
+
 
 
 
