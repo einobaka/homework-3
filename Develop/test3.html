@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Result - test 3</title>
+</head>
+
+<body>
+
+    <script>
+        console.log("==If you see this, the HTML works==")
+
+        // // A test if functions can be added together:
+        // function main() {
+        //     return sub1() + sub2() + sub3();
+        // }
+        // function sub1() {
+        //     var text = "test1"
+        //     return text;
+        // }
+        // function sub2() {
+        //     var text = "test2"
+        //     return text;
+        // }
+        // function sub3() {
+        //     var text = "test3"
+        //     return text;
+        // }
+        // console.log("==this is the main string together==")
+        // console.log(main());
+        // console.log("==these are the subs individually==")
+        // console.log("sub 1: " + sub1());
+        // console.log("sub 2: " + sub2());
+        // console.log("sub 3: " + sub3());
+        // console.log('==Above script passed==')
+
+        // //Test of multiple alerts in an array
+        // var passPrompt = {
+        //     askLength: 0,
+        //     askLowercase: false,
+        //     askUppercase: false,
+        //     asknumeric: false,
+        //     askspecial: false,
+
+        //     showResult: function () {
+
+        //         var result = [
+        //             "\n Desired password length: " + passPrompt.askLength,
+        //             "\n You would like upper case letters: " + passPrompt.askUpper,
+        //             "\n You would like lower case letters: " + passPrompt.askLower,
+        //             "\n You would like numeric characters: " + passPrompt.askNumeric,
+        //             "\n You would like special characters: " + passPrompt.askSpecial,
+        //         ];
+        //         alert(result);
+
+        //     },
+        // }
+        // console.log(passPrompt.showResult());
+        // console.log('==Above script passed==')
+
+        // //Test of a prompt in method
+        // var passPrompt = {
+        //     askLength: 0,
+        //     askLowercase: false,
+        //     askUppercase: false,
+        //     askNumeric: false,
+        //     askSpecial: false,
+        //     // Prompt begins to be used for passPrompt{} values
+        //     askLength: prompt('How long would you like your password? Pick between 8-128 characters.'),
+        //     // First method to confirm if the characters are set between 8 and 128 followed by confirms
+        //     lengthEntered: function () {
+        //         if (passPrompt.askLength >= 8 && passPrompt.askLength <= 128) {
+        //             passPrompt.askLowercase = confirm('Would you like lowercase letters?');
+        //         }
+        //         if (passPrompt.askLength >= 8 && passPrompt.askLength <= 128) {
+        //             passPrompt.askUppercase = confirm('Would you like uppercase letters?')
+        //         }
+        //         if (passPrompt.askLength >= 8 && passPrompt.askLength <= 128) {
+        //             passPrompt.askUppercase = confirm('Would you like numeric characters')
+        //         }
+        //         if (passPrompt.askLength >= 8 && passPrompt.askLength <= 128) {
+        //             passPrompt.askUppercase = confirm('Would you like special characters')
+        //             return [passPrompt.askLowercase, passPrompt.askUppercase, passPrompt.askNumeric, passPrompt.askSpecial];
+        //         }
+        //         else {
+        //             return alert("Password length does not meet parameters, please try again.");
+        //         }
+        //     },
+        // }
+        // console.log(passPrompt.lengthEntered());
+        // console.log('==Above script passed==')
+
+        //Compound the functions
+        var passPrompt = {
+            askLength: prompt('How long would you like your password? Pick between 8-128 characters.'),
+            // First method to confirm if the characters are set between 8 and 128
+
+            result: function () {
+
+                if (passPrompt.askLength >= 8 && passPrompt.askLength <= 128) {
+                    askLowercase = confirm('Would you like lowercase letters?');
+                    askUppercase = confirm('Would you like uppercase letters?');
+                    askNumeric = confirm('Would you like numeric characters?');
+                    askSpecial = confirm('Would you like special characters?');
+                }
+                else {
+                    alert('Password does not meet parameters; please choose the length between 8 & 128.')
+                }
+                if (askLowercase === true) {
+                    var lowercase = 'abcdefghijklmnopqrstuvwxyz';
+                }
+                else if (askLowercase === false) {
+                    var lowercase = '';
+                }
+                if (askUppercase === true) {
+                    var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWZYZ';
+                }
+                else if (askUppercase === false) {
+                    var uppercase = '';
+                }
+                if (askNumeric === true) {
+                    var numeric = '1234567890';
+                }
+                else if (askNumeric === false) {
+                    var numeric = '';
+                }
+                if (askSpecial === true) {
+                    var special = '!@#$%^&*()';
+                }
+                else if (askSpecial === false) {
+                    var special = '';
+                }
+                if (askLowercase === true || askUppercase === true || askNumeric === true || askSpecial === true) {
+                    var result = [
+                        "These are your following parameters: ",
+                        "\n\n Desired password length: " + passPrompt.askLength,
+                        "\n You picked lower case letters: " + askLowercase,
+                        "\n You picked upper case letters: " + askUppercase,
+                        "\n You picked numeric characters: " + askNumeric,
+                        "\n You picked special characters: " + askSpecial
+                    ];
+                    alert(result);
+                    return [lowercase + uppercase + numeric + special];
+                }
+                else {
+                    alert('Password does not meet parameters; please choose at least one character type.')
+                }
+
+            },
+
+
+
+        }
+
+
+        // Main object end
+
+        // Start console log debugging
+        // Prompts
+        // console.log("=== Prompt Answers ===");
+        // console.log("Chosen length: " + passPrompt.askLength);
+        // console.log("Lowercase?: " + askLowercase);
+        // console.log("Uppercase?: " + passPrompt.askUppercase);
+        // console.log("Numeric?: " + passPrompt.askNumeric);
+        // console.log("Special: " + passPrompt.askSpecial);
+
+        // Ouputs
+        console.log("==== Function outputs ====");
+
+        console.log("Result: " + passPrompt.result());
+
+        // Passed scripts
+        console.log("=== Do the functions have an output? ===");
+
+
+
+    </script>
+
+</body>
+
+</html>

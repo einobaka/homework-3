@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rough script testing numebr 2</title>
 </head>
 
 <body>
@@ -15,25 +15,16 @@
 
     <script>
 
-
-
-        // function writePassword() {
-        //     var gather = userCriteria();
-
-        // }
-
+        // Early array testing
         // function jumblePassword() {
-
-        //     charArray = [uppercase, lowercase, numeric, special]
-
-        //     characters = {
-        //         uppercase = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
-
-        //         numeric = ['123456789'];
-        //         special = ['!@#$%^&*()']
+        //     var charArray = [uppercase + lowercase + numeric + special];
+        //     var characters = {
+        //         uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        //         numeric = '123456789',
+        //         special = '!@#$%^&*()',
         //     }
-        //     // hint characters.uppercase
         // }
+        // Result unused
 
         // write function for the user criteria to store the information
         // function userCriteria(finalResult) {
@@ -157,39 +148,105 @@
         // }
         // new code base based on information above
 
+
+        // Object Begins
         var passPrompt = {
-            length: 0,
-            lowercase: false,
-            uppercase: false,
-            numeric: false,
-            special: false,
+            askLength: 0,
+            askLowercase: false,
+            askUppercase: false,
+            askNumeric: false,
+            askSpecial: false,
+            // Prompt begins to be used for passPrompt{} values
+            askLength: prompt('How long would you like your password? Pick between 8-128 characters.'),
+            // First method to confirm if the characters are set between 8 and 128
 
-            length: prompt('How long would you like your password? Pick between 8-128 characters.'),
-            lowercase: confirm('Would you like lowercase letters?'),
-            uppercase: confirm('Would you like uppercase letters?'),
-            numeric: confirm('Would you like numeric characters?'),
-            special: confirm('Would you like special charaacters?'),
-
-            lowercase: function () {
-
-                if (prompt.lowercase === true) {
-                    var result = 'abcdefghijklmnopqrstuvwxyz';
+            lengthEntered: function () {
+                if (passPrompt.askLength >= 8 && passPrompt.askLength <= 128) {
+                    return passPrompt.askLength;
                 }
                 else {
-                    var result = '';
+                    return alert("Password does not meet parameters, please choose proper length or at least one character type please try again.");
                 }
+            },
+
+            askLowercase: confirm('Would you like lowercase letters?'),
+            askUppercase: confirm('Would you like uppercase letters?'),
+            askNumeric: confirm('Would you like numeric characters?'),
+            askSpecial: confirm('Would you like special characters?'),
+
+            // Second method to show passPrompt{} and characters selected
+
+
+            characters: function () {
+
+                if (passPrompt.askLowercase === true) {
+                    var lowercase = 'abcdefghijklmnopqrstuvwxyz';
+                }
+                else if (passPrompt.askLowercase === false) {
+                    var lowercase = '';
+                }
+                if (passPrompt.askUppercase === true) {
+                    var uppercase = 'ABCDEFGHIJKLMNOP';
+                }
+                else if (passPrompt.askUppercase === false) {
+                    var uppercase = '';
+                }
+                if (passPrompt.askNumeric === true) {
+                    var numeric = '1234567890';
+                }
+                else if (passPrompt.askNumeric === false) {
+                    var numeric = '';
+                }
+                if (passPrompt.askSpecial === true) {
+                    var special = '!@#$%^&*()';
+                }
+                else if (passPrompt.askSpecial === false) {
+                    var special = '';
+                }
+
+                if (passPrompt.askLowercase === true || passPrompt.askUppercase === true || passPrompt.askNumeric === true || passPrompt.askSpecial === true) {
+                    return characters = (lowercase + uppercase + numeric + special
+                    );
+                }
+                // else {
+                //     return alert("You must choose at least one character type.");
+                // }
+            },
+
+            showResult: function () {
+                var characters = passPrompt.characters();
+                var result = [
+                    "\n Desired password length between 8 & 128: " + passPrompt.askLength,
+                    "\n You picked lower case letters: " + passPrompt.askLowercase,
+                    "\n You picked upper case letters: " + passPrompt.askUppercase,
+                    "\n You picked numeric characters: " + passPrompt.askNumeric,
+                    "\n You picked special characters: " + passPrompt.askSpecial,
+                    "\n\n Here are the characters that will randomly generate: " + characters
+                ];
+                alert(result);
                 return result;
-            }
-        }
-        console.log("===================")
-        console.log("Chosen length: " + passPrompt.length);
-        console.log("Lowercase?: " + passPrompt.lowercase);
-        console.log("Uppercase?: " + passPrompt.uppercase);
-        console.log("Numeric?: " + passPrompt.numeric);
-        console.log("Special: " + passPrompt.special);
-        console.log(passPrompt.lowercase());
+            },
 
+        } // Main object end
 
+        // Start console log debugging
+        // Prompts
+        console.log("=== Prompt Answers ===");
+        console.log("Chosen length: " + passPrompt.askLength);
+        console.log("Lowercase?: " + passPrompt.askLowercase);
+        console.log("Uppercase?: " + passPrompt.askUppercase);
+        console.log("Numeric?: " + passPrompt.askNumeric);
+        console.log("Special: " + passPrompt.askSpecial);
+
+        // Ouputs
+        console.log("==== Function outputs ====");
+        console.log("Output characters: " + passPrompt.characters());
+        console.log("Does length meet criteria?: " + passPrompt.lengthEntered());
+
+        // Passed scripts
+        console.log("=== Do the functions have an output? ===");
+        console.log("Passed: " + passPrompt.showResult());
+        console.log("Passed: " + passPrompt.characters());
 
 
 
