@@ -8,18 +8,16 @@ function writePassword() {
   passwordText.value = password;
 
 }
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword, generatePassword);
 
 // First method to confirm if the characters are set between 8 and 128
 function generatePassword() {
   var askLength = prompt('How long would you like your password? Pick between 8-128 characters.');
 
   if (askLength >= 8 && askLength <= 128) {
-    askLowercase = confirm('Would you like lowercase letters?');
-    askUppercase = confirm('Would you like uppercase letters?');
-    askNumeric = confirm('Would you like numeric characters?');
-    askSpecial = confirm('Would you like special characters?');
+    var askLowercase = confirm('Would you like lowercase letters?');
+    var askUppercase = confirm('Would you like uppercase letters?');
+    var askNumeric = confirm('Would you like numeric characters?');
+    var askSpecial = confirm('Would you like special characters?');
   }
   else {
     alert('Password does not meet parameters; please choose the length between 8 & 128.')
@@ -70,6 +68,9 @@ function generatePassword() {
   else {
     alert('Password does not meet parameters; please choose at least one character type.')
   }
-}
 
-console.log("Result: " + generatePassword());
+};
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
