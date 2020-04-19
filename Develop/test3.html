@@ -133,7 +133,7 @@
                     var special = '';
                 }
                 if (askLowercase === true || askUppercase === true || askNumeric === true || askSpecial === true) {
-                    var result = [
+                    var promptResult = [
                         "These are your following parameters: ",
                         "\n\n Desired password length: " + passPrompt.askLength,
                         "\n You picked lower case letters: " + askLowercase,
@@ -141,19 +141,26 @@
                         "\n You picked numeric characters: " + askNumeric,
                         "\n You picked special characters: " + askSpecial
                     ];
-                    alert(result);
+                    alert(promptResult);
                     return [lowercase + uppercase + numeric + special];
                 }
                 else {
                     alert('Password does not meet parameters; please choose at least one character type.')
                 }
-
             },
+            genPw: function () {
+                var result = '';
+                var characters = passPrompt.result();
+                for (i = 0; i < passPrompt.askLength; i++) {
+                    result += characters.charAt(Math.floor(Math.random() * characters.Length));
+                }
+                return result;
+            }
+
 
 
 
         }
-
 
         // Main object end
 
@@ -166,13 +173,13 @@
         // console.log("Numeric?: " + passPrompt.askNumeric);
         // console.log("Special: " + passPrompt.askSpecial);
 
-        // Ouputs
-        console.log("==== Function outputs ====");
-
+        // // Ouputs
+        // console.log("==== Function outputs ====");
+        console.log("Result: " + passPrompt.genPw());
         console.log("Result: " + passPrompt.result());
 
-        // Passed scripts
-        console.log("=== Do the functions have an output? ===");
+        // // Passed scripts
+        // console.log("=== Do the functions have an output? ===");
 
 
 

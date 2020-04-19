@@ -15,23 +15,23 @@
 
     <script>
 
-        var pwLength = 5
-        var pwUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        var pwLower = pwUpper[25].toLowerCase();
-        var pwNumeric = "0123456789";
-        var pwSpecial = "!@#$%^&*()";
+        // var pwLength = 5
+        // var pwUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        // var pwLower = pwUpper[25].toLowerCase();
+        // var pwNumeric = "0123456789";
+        // var pwSpecial = "!@#$%^&*()";
 
-        var genUpper = [];
-        var genNumeric = [];
+        // var genUpper = [];
+        // var genNumeric = [];
 
 
-        //if this was a loop, it can be done this way, also add +
+        // //if this was a loop, it can be done this way, also add +
 
-        var length = prompt('length of pw?');
-        var caseUpper = confirm('uppercase?');
-        var caseLower = confirm('lowercase?');
-        var caseNumeric = confirm('numeric?');
-        var caseSpecial = confirm('special?');
+        // var length = prompt('length of pw?');
+        // var caseUpper = confirm('uppercase?');
+        // var caseLower = confirm('lowercase?');
+        // var caseNumeric = confirm('numeric?');
+        // var caseSpecial = confirm('special?');
 
 
 
@@ -48,19 +48,25 @@
             var pwUpLowNum = pwUpper.concat(pwLower, pwNumeric);
             // var pwUpLowNumSpe = (pwUpper + pwLower + pwNumeric + pwSpecial);
             var i;
-            if (caseUpper & caseLower & caseNumeric === true) {
+            // if (caseUpper & caseLower & caseNumeric === true) {
                 for (i = 0; i < length; i++) {
                     pwResult += pwUpLowNum.charAt(Math.floor(Math.random() * pwUpLowNum.length));
                 }
                 console.log(pwResult);
-            }
-            if (caseUpper & caseLower === true) {
-                for (i = 0; i < length; i++) {
-                    pwResult += pwUpLow.charAt(Math.floor(Math.random() * pwUpLow.length));
-                }
-                console.log(pwResult);
-            }
+                };
+            // if (caseUpper & caseLower === true) {
+            //     for (i = 0; i < length; i++) {
+            //         pwResult += pwUpLow.charAt(Math.floor(Math.random() * pwUpLow.length));
+            //     }
+            //     console.log(pwResult);
+            // }
 
+            return pwResult;
+
+        };
+        console.log(generatePassword());
+
+        
             // if (caseUpper === true && caseLower === true && caseNumeric === true && caseSpecial === true) {
             //     for ( i = 0; i < length; i++ ) {
             //     pwResult += pwUpLowNumSpe.charAt(Math.floor(Math.random() * pwUpLowNumSpe.length));
@@ -88,10 +94,6 @@
             // }
 
             //this is important below     
-            return pwResult;
-
-        }
-
 
 
 
