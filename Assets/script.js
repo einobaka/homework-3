@@ -6,9 +6,9 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
-
 }
 
+// Core method for generate password
 function generatePassword() {
   // First prompt for character length between 8 and 128.
   var askLength = prompt('How long would you like your password? Pick between 8-128 characters.');
@@ -65,14 +65,14 @@ function generatePassword() {
       randomize += characters[Math.floor(Math.random() * characters.length)];
     };
     // Return the final result to generatePassword();
-    return randomize;
+    return console.log(randomize), randomize;
   }
   // If user doesn't select enough characters, return of reject will happen instead.
   else {
     return alert('Password does not meet parameters; please choose at least one character type.')
   }
-
 };
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
