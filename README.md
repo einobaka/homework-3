@@ -1,6 +1,8 @@
 # homework-3
 Homework Week 3 - JavaScript - random generate password 
 
+link to HW : 
+
 Dear reader,
 
 If you would ike to see the process of how each code block was dissected to create the final product. Please refer to the compiled-test.HTML page. The scripts have been compiled in order for when the methods were created and tested.
@@ -13,3 +15,4 @@ Cheers!
 
 Below are SS of the script VS the output:
 
+![Image of Main page](https://github.com/einobaka/homework-2/blob/master/images/index.png)
