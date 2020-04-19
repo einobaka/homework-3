@@ -1,6 +1,6 @@
 # Homework Week 3 - JavaScript - random generate password 
 
-link to HW : 
+link to HW : https://einobaka.github.io/hw03-js-pwgenerator-gt/index.html
 
 Dear reader,
 
