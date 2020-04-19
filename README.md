@@ -15,4 +15,4 @@ Cheers!
 
 Below are SS of the script VS the output:
 
-![Image of Main page](../Assets/hw03-passwordGen-working.png)
+![Image of Main page](https://github.com/einobaka/hw03-js-pwgenerator-gt/blob/master/Assets/hw03-passwordGen-working.png)
