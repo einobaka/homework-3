@@ -7,9 +7,9 @@ If you would ike to see the process of how each code block was dissected to crea
 
 Failedscripts[x].html are the compiles of scripts that did not make it to the compiled test. 
 
-Thank you,
+Cheers!
 
-Gene T
+- GT
 
 Below are SS of the script VS the output:
 

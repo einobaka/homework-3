@@ -35,36 +35,36 @@
 
 
 
-        function generatePassword(length) {
+        // function generatePassword(length) {
 
-            var pwResult = [];
+        //     var pwResult = [];
 
-            var pwUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            var pwLower = pwUpper.toLowerCase();
-            var pwNumeric = '0123456789';
-            var pwSpecial = '!@#$%^&*()';
-            //multi variables
-            var pwUpLow = pwUpper.concat(pwLower);
-            var pwUpLowNum = pwUpper.concat(pwLower, pwNumeric);
-            // var pwUpLowNumSpe = (pwUpper + pwLower + pwNumeric + pwSpecial);
-            var i;
-            // if (caseUpper & caseLower & caseNumeric === true) {
-            for (i = 0; i < length; i++) {
-                pwResult += pwUpLowNum.charAt(Math.floor(Math.random() * pwUpLowNum.length));
-            }
-            console.log(pwResult);
-        };
-        // if (caseUpper & caseLower === true) {
+        //     var pwUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        //     var pwLower = pwUpper.toLowerCase();
+        //     var pwNumeric = '0123456789';
+        //     var pwSpecial = '!@#$%^&*()';
+        //     //multi variables
+        //     var pwUpLow = pwUpper.concat(pwLower);
+        //     var pwUpLowNum = pwUpper.concat(pwLower, pwNumeric);
+        //     // var pwUpLowNumSpe = (pwUpper + pwLower + pwNumeric + pwSpecial);
+        //     var i;
+        //     // if (caseUpper & caseLower & caseNumeric === true) {
         //     for (i = 0; i < length; i++) {
-        //         pwResult += pwUpLow.charAt(Math.floor(Math.random() * pwUpLow.length));
+        //         pwResult += pwUpLowNum.charAt(Math.floor(Math.random() * pwUpLowNum.length));
         //     }
         //     console.log(pwResult);
-        // }
+        // };
+        // // if (caseUpper & caseLower === true) {
+        // //     for (i = 0; i < length; i++) {
+        // //         pwResult += pwUpLow.charAt(Math.floor(Math.random() * pwUpLow.length));
+        // //     }
+        // //     console.log(pwResult);
+        // // }
 
-        return pwResult;
+        // return pwResult;
 
-        };
-        console.log(generatePassword());
+        // };
+        // console.log(generatePassword());
 
 
             // if (caseUpper === true && caseLower === true && caseNumeric === true && caseSpecial === true) {
