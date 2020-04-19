@@ -109,25 +109,25 @@
                     alert('Password does not meet parameters; please choose the length between 8 & 128.')
                 }
                 if (askLowercase === true) {
-                    var lowercase = 'abcdefghijklmnopqrstuvwxyz';
+                    var lowercase = ['abcdefghijklmnopqrstuvwxyz'];
                 }
                 else if (askLowercase === false) {
                     var lowercase = '';
                 }
                 if (askUppercase === true) {
-                    var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWZYZ';
+                    var uppercase = ['ABCDEFGHIJKLMNOPQRSTUVWZYZ'];
                 }
                 else if (askUppercase === false) {
                     var uppercase = '';
                 }
                 if (askNumeric === true) {
-                    var numeric = '1234567890';
+                    var numeric = ['1234567890'];
                 }
                 else if (askNumeric === false) {
                     var numeric = '';
                 }
                 if (askSpecial === true) {
-                    var special = '!@#$%^&*()';
+                    var special = ['!@#$%^&*()'];
                 }
                 else if (askSpecial === false) {
                     var special = '';
@@ -142,25 +142,25 @@
                         "\n You picked special characters: " + askSpecial
                     ];
                     alert(promptResult);
-                    return [lowercase + uppercase + numeric + special];
+
+                    var characters = lowercase + uppercase + numeric + special;
+                    var randomize = [];
+                    for (var i = 0; i < passPrompt.askLength; i++) {
+                        randomize += characters[Math.floor(Math.random() * characters.length)];
+                    };
+
+                    return randomize;
                 }
                 else {
                     alert('Password does not meet parameters; please choose at least one character type.')
                 }
             },
-            genPw: function () {
-                var result = '';
-                var characters = passPrompt.result();
-                for (i = 0; i < passPrompt.askLength; i++) {
-                    result += characters.charAt(Math.floor(Math.random() * characters.Length));
-                }
-                return result;
-            }
+
+        };
+        console.log("Result: " + passPrompt.result());
 
 
 
-
-        }
 
         // Main object end
 
@@ -175,8 +175,11 @@
 
         // // Ouputs
         // console.log("==== Function outputs ====");
-        console.log("Result: " + passPrompt.genPw());
-        console.log("Result: " + passPrompt.result());
+        // console.log("Result: " + postResult());
+
+        // console.log(passPrompt.finalCharacters());
+            // console.log(result);
+
 
         // // Passed scripts
         // console.log("=== Do the functions have an output? ===");
