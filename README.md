@@ -15,4 +15,4 @@ Cheers!
 
 Below are SS of the script VS the output:
 
-![Image of Main page](https://github.com/einobaka/homework-2/blob/master/images/index.png)
+![Image of Main page](../Assets/hw03-passwordGen-working.png)
