@@ -13,8 +13,9 @@ body,
 }
 
 body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
+  font-family: 'Anonymous Pro', monospace;
+  font-weight: lighter;
+  background-color: lightgray;
 }
 
 .wrapper {
