@@ -11,7 +11,7 @@ Failedscripts[x].html are the compiles of scripts that did not make it to the co
 
 Cheers!
 
-- GT
+-GT
 
 Below are SS of the script VS the output:
 
