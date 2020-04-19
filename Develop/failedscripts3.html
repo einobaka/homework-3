@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Failed SCRIPTS - 3</title>
 </head>
 
 <body>
 
-
+    <!-- // FAILED SCRIPTS - 3//  -->
 
     <p id="demo"></p>
 
@@ -49,24 +49,24 @@
             // var pwUpLowNumSpe = (pwUpper + pwLower + pwNumeric + pwSpecial);
             var i;
             // if (caseUpper & caseLower & caseNumeric === true) {
-                for (i = 0; i < length; i++) {
-                    pwResult += pwUpLowNum.charAt(Math.floor(Math.random() * pwUpLowNum.length));
-                }
-                console.log(pwResult);
-                };
-            // if (caseUpper & caseLower === true) {
-            //     for (i = 0; i < length; i++) {
-            //         pwResult += pwUpLow.charAt(Math.floor(Math.random() * pwUpLow.length));
-            //     }
-            //     console.log(pwResult);
-            // }
+            for (i = 0; i < length; i++) {
+                pwResult += pwUpLowNum.charAt(Math.floor(Math.random() * pwUpLowNum.length));
+            }
+            console.log(pwResult);
+        };
+        // if (caseUpper & caseLower === true) {
+        //     for (i = 0; i < length; i++) {
+        //         pwResult += pwUpLow.charAt(Math.floor(Math.random() * pwUpLow.length));
+        //     }
+        //     console.log(pwResult);
+        // }
 
-            return pwResult;
+        return pwResult;
 
         };
         console.log(generatePassword());
 
-        
+
             // if (caseUpper === true && caseLower === true && caseNumeric === true && caseSpecial === true) {
             //     for ( i = 0; i < length; i++ ) {
             //     pwResult += pwUpLowNumSpe.charAt(Math.floor(Math.random() * pwUpLowNumSpe.length));

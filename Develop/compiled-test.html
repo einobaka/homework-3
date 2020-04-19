@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Result - test 3</title>
+    <title>Compiled HTML of Method Tests</title>
 </head>
 
 <body>
@@ -12,7 +12,14 @@
     <script>
         console.log("==If you see this, the HTML works==")
 
-        // // A test if functions can be added together:
+        //Hello, here is a compilation of multiple method blocks tests. Succesful methods have been commented out. Please view in console.log to see appropriate result.
+        //
+        //
+        //*START*
+        //
+        //
+        // A test if functions can be added together;
+        //
         // function main() {
         //     return sub1() + sub2() + sub3();
         // }
@@ -34,18 +41,20 @@
         // console.log("sub 1: " + sub1());
         // console.log("sub 2: " + sub2());
         // console.log("sub 3: " + sub3());
-        // console.log('==Above script passed==')
-
-        // //Test of multiple alerts in an array
+        //
+        // Test if functions be added together: SUCESSFUL
+        //
+        //
+        //
+        // Test of multiple alerts in an array;
+        //
         // var passPrompt = {
         //     askLength: 0,
         //     askLowercase: false,
         //     askUppercase: false,
         //     asknumeric: false,
         //     askspecial: false,
-
         //     showResult: function () {
-
         //         var result = [
         //             "\n Desired password length: " + passPrompt.askLength,
         //             "\n You would like upper case letters: " + passPrompt.askUpper,
@@ -54,13 +63,16 @@
         //             "\n You would like special characters: " + passPrompt.askSpecial,
         //         ];
         //         alert(result);
-
         //     },
         // }
         // console.log(passPrompt.showResult());
-        // console.log('==Above script passed==')
-
-        // //Test of a prompt in method
+        //
+        // Test of multiple alers in array: SUCESSFUL
+        //
+        //
+        //
+        // Test of a prompting in a method;
+        //
         // var passPrompt = {
         //     askLength: 0,
         //     askLowercase: false,
@@ -90,13 +102,15 @@
         //     },
         // }
         // console.log(passPrompt.lengthEntered());
-        // console.log('==Above script passed==')
-
-        //Compound the functions
+        // Test of a prompting in a method: SUCESSFUL
+        //
+        //
+        //
+        // Core object and method test - randomizing the result within a method - final composition to be transferred to script.js
+        //
         var passPrompt = {
             askLength: prompt('How long would you like your password? Pick between 8-128 characters.'),
             // First method to confirm if the characters are set between 8 and 128
-
             result: function () {
 
                 if (passPrompt.askLength >= 8 && passPrompt.askLength <= 128) {
@@ -158,33 +172,31 @@
 
         };
         console.log("Result: " + passPrompt.result());
-
-
-
-
-        // Main object end
-
-        // Start console log debugging
-        // Prompts
+        // Core object and method: SUCCESSFUL - transferred to main script.
+        //
+        //
+        // Start console log debugging some switched back and forth with adjustment
+        //
+        // Check prompts
         // console.log("=== Prompt Answers ===");
         // console.log("Chosen length: " + passPrompt.askLength);
         // console.log("Lowercase?: " + askLowercase);
         // console.log("Uppercase?: " + passPrompt.askUppercase);
         // console.log("Numeric?: " + passPrompt.askNumeric);
         // console.log("Special: " + passPrompt.askSpecial);
-
-        // // Ouputs
+        //
+        // Ouputs
         // console.log("==== Function outputs ====");
         // console.log("Result: " + postResult());
-
         // console.log(passPrompt.finalCharacters());
-            // console.log(result);
-
-
-        // // Passed scripts
+        // console.log(result);
+        //
+        // Passed scripts
         // console.log("=== Do the functions have an output? ===");
-
-
+        //
+        //
+        //
+        //*END*
 
     </script>
 
