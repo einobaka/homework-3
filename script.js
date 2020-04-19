@@ -21,7 +21,7 @@ function generatePassword() {
   }
   // Reject right away if user does not meet the length.
   else {
-    alert('Password does not meet parameters; please choose the length between 8 & 128.')
+    return alert('Password does not meet parameters; please choose the length between 8 & 128.')
   }
   if (askLowercase === true) {
     var lowercase = ['abcdefghijklmnopqrstuvwxyz'];
