@@ -1,5 +1,4 @@
-# homework-3
-Homework Week 3 - JavaScript - random generate password 
+# Homework Week 3 - JavaScript - random generate password 
 
 link to HW : 
 
